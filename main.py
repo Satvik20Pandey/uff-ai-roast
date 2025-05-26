@@ -7,15 +7,21 @@ st.set_page_config(page_title="Uff-AI 🔥 Roast Time!", page_icon="😈", layou
 # CSS for style and scanner animation
 st.markdown("""
     <style>
-    body {
-        background-color: #fff;
-    }
+    /* Remove body override (Streamlit restricts this) */
+
+    /* Fix padding around Streamlit container */
     .main {
         background: linear-gradient(135deg, #ffe0e9, #ffd4b3);
         padding: 3rem;
         border-radius: 25px;
         box-shadow: 0px 0px 40px rgba(255, 70, 70, 0.3);
     }
+
+    /* Force Streamlit background to be transparent */
+    .stApp {
+        background-color: transparent;
+    }
+
     .title {
         font-size: 60px;
         text-align: center;
@@ -24,17 +30,20 @@ st.markdown("""
         text-shadow: 2px 2px #000;
         animation: pulse 2s infinite;
     }
+
     @keyframes pulse {
         0% { transform: scale(1); }
         50% { transform: scale(1.04); }
         100% { transform: scale(1); }
     }
+
     .subtitle {
         text-align: center;
         font-size: 26px;
         color: #d50000;
         margin-bottom: 30px;
     }
+
     .upload-section {
         background-color: #fff6f7;
         border: 2px dashed #ff1744;
@@ -43,11 +52,13 @@ st.markdown("""
         text-align: center;
         margin-bottom: 30px;
     }
+
     .upload-instruction {
         color: #ff0000;
         font-size: 20px;
         font-weight: bold;
     }
+
     .button-style div.stButton > button {
         width: 100%;
         padding: 15px;
@@ -60,9 +71,11 @@ st.markdown("""
         box-shadow: 0px 4px 10px #ff1744a0;
         transition: all 0.3s ease-in-out;
     }
+
     .button-style div.stButton > button:hover {
         transform: scale(1.05);
     }
+
     .side-by-side {
         display: flex;
         justify-content: center;
@@ -70,15 +83,18 @@ st.markdown("""
         gap: 40px;
         margin-top: 30px;
     }
+
     .animal-img, .user-img {
         border-radius: 20px;
         max-width: 350px;
         box-shadow: 0px 4px 25px rgba(0,0,0,0.25);
         position: relative;
     }
+
     .scanner {
         position: relative;
     }
+
     .scanner::before {
         content: "";
         position: absolute;
@@ -90,10 +106,12 @@ st.markdown("""
         animation: scan 2s infinite linear;
         pointer-events: none;
     }
+
     @keyframes scan {
         0% { background-position: 0 -100%; }
         100% { background-position: 0 100%; }
     }
+
     .roast-box {
         font-size: 28px;
         font-weight: bold;
@@ -105,6 +123,7 @@ st.markdown("""
         text-align: center;
         box-shadow: 0px 0px 20px rgba(255, 23, 68, 0.2);
     }
+
     .you-look {
         text-align: center;
         font-size: 24px;
@@ -114,6 +133,7 @@ st.markdown("""
     }
     </style>
 """, unsafe_allow_html=True)
+
 
 st.markdown('<div class="main">', unsafe_allow_html=True)
 st.markdown('<div class="title">🔥 Uff-AI: Roast Me, Baby! 🔥</div>', unsafe_allow_html=True)
