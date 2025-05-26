@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Uff-AI: You Just Got Roasted! 🥵</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Anton&family=Comic+Neue:wght@700&display=swap');
+  * {
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+  }
+  body {
+    background: linear-gradient(135deg, #ffe0e9, #ffd4b3);
+    font-family: 'Comic Neue', cursive, sans-serif;
+    color: #880e4f;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 5rem;
+    text-shadow: 3px 3px 8px rgba(255, 0, 55, 0.3);
+    margin-bottom: 10px;
+    user-select: none;
+    color: #ff1744;
+  }
+  h2 {
+    font-size: 2.3rem;
+    margin-bottom: 40px;
+    font-weight: 700;
+    text-shadow: 2px 2px 6px rgba(255, 0, 55, 0.25);
+    user-select: none;
+  }
+  button {
+    background: linear-gradient(45deg, #ff1744, #ff9100);
+    color: white;
+    font-size: 2.8rem;
+    font-weight: 900;
+    padding: 25px 70px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(255,59,59,0.6);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    user-select: none;
+  }
+  button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 30px rgba(255,59,59,0.8);
+  }
+  button:active {
+    transform: scale(0.95);
+    box-shadow: 0 7px 15px rgba(255,59,59,0.5);
+  }
+  .funny-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 60px;
+    justify-content: center;
+    user-select: none;
+  }
+  .funny-images img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+  }
+  .funny-images img:hover {
+    transform: rotate(8deg) scale(1.1);
+    box-shadow: 0 10px 25px rgba(255,100,100,0.5);
+  }
+  footer {
+    position: fixed;
+    bottom: 15px;
+    font-size: 1rem;
+    color: rgba(136, 14, 79, 0.7);
+    user-select: none;
+  }
+  @media (max-width: 600px) {
+    h1 { font-size: 3.5rem; }
+    h2 { font-size: 1.6rem; }
+    button { font-size: 2rem; padding: 20px 40px; }
+    .funny-images img { width: 80px; height: 80px; }
+  }
+</style>
+</head>
+<body>
+<h1>Uff-AI 🥵</h1>
+<h2>You Just Got Roasted!</h2>
+<button id="roastBtn">🔥 Roast Me!</button>
+<div class="funny-images">
+  <img src="https://cdn.pixabay.com/photo/2022/05/26/00/20/laughing-7221581_1280.png" alt="Laughing Meme" />
+  <img src="https://toppng.com/uploads/preview/funny-smiley-face-png-emoticon-11562897727velxmxmpr6.png" alt="Funny Face" />
+  <img src="https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/svg/1f975.svg" alt="Roast Fire" />
+  <img src="https://www.pngmart.com/files/23/Tongue-Out-Emoji-PNG-HD.png" alt="Smiling Emoji" />
+</div>
+<footer>Made with ❤️ for savage fun — By Satvik Pandey</footer>
+<script>
+  const roastBtn = document.getElementById('roastBtn')
+  roastBtn.onclick = () => {
+    window.location.href = 'http://localhost:8501'; 
+  }
+</script>
+</body>
+</html>
